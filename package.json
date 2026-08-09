@@ -1,17 +1,25 @@
 {
-  "name": "application-name",
-  "version": "0.0.1",
-  "private": true,
+  "name": "recall",
+  "version": "0.1.0",
+  "description": "A notes app with retrieval-augmented search and Q&A.",
+  "type": "module",
+  "main": "src/server.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test tests/**/*.test.js",
+    "eval": "node scripts/eval.js"
   },
   "dependencies": {
-    "express": "3.2.5",
-    "jade": "*",
-    "mongoose": "~3.6.20",
-    "underscore": "~1.5.2",
-    "imageinfo": "~1.0.4",
-    "passport": "~0.1.17",
-    "passport-local": "~0.1.6"
+    "@anthropic-ai/sdk": "^0.32.0",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.7.0"
+  },
+  "devDependencies": {
+    "mongodb-memory-server": "^10.1.2",
+    "supertest": "^7.0.0"
   }
 }

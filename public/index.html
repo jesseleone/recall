@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>recall</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+<div id="auth-screen" class="screen">
+  <h1>recall</h1>
+  <p class="tagline">Notes with retrieval-augmented search.</p>
+  <form id="auth-form">
+    <input type="email" id="email" placeholder="email" required autocomplete="username" />
+    <input type="password" id="password" placeholder="password" required autocomplete="current-password" />
+    <div class="row">
+      <button type="submit" data-mode="login">Log in</button>
+      <button type="submit" data-mode="register">Register</button>
+    </div>
+    <p id="auth-error" class="error"></p>
+  </form>
+</div>
+
+<div id="app-screen" class="screen hidden">
+  <header>
+    <h1>recall</h1>
+    <button id="logout">Log out</button>
+  </header>
+
+  <section id="ask">
+    <form id="ask-form">
+      <input type="text" id="question" placeholder="Ask something about your notes..." required />
+      <button type="submit">Ask</button>
+    </form>
+    <div id="answer"></div>
+  </section>
+
+  <section id="composer">
+    <input type="text" id="note-title" placeholder="Title" />
+    <textarea id="note-body" placeholder="Write a note..." rows="4"></textarea>
+    <button id="save-note">Save note</button>
+  </section>
+
+  <section id="notes-list"></section>
+</div>
+
+<script src="/app.js"></script>
+</body>
+</html>
