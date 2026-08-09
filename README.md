@@ -3,14 +3,6 @@
 A notes app with retrieval-augmented search and Q&A. Ask questions about
 your own notes and get grounded answers with citations back to the source.
 
-## Background
-
-This repository started in 2013 with Node.js, Express, Passport, and
-Mongoose. The core intent: an app where you store what you know and find
-it again later. With the advancement of AI and RAG, I wanted to
-transition from keyword lookup to semantic retrieval over your own
-corpus, grounded and cited rather than hallucinated.
-
 ## Why
 
 Most "notes app" AI features just bolt a chatbot onto the existing UI.
